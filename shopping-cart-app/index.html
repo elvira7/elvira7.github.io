@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julehandel</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  
+</head>
+<body>
+
+    <!-- Header som viser hvor mange varer ligger i handlekurven -->
+    <header>
+        <div id="handlekurvText">
+            <p id="handlekurvLenk" hidden><a href="handlekurven.html">Du har <el id="antallVare">0</el> varer i handlekurven</a></p>
+            <p id="ingenVarerText" hidden>Ingen varer i handlekurven</p>
+        </div>
+    </header>
+    <!-- end Header som viser hvor mange varer ligger i handlekurven -->
+        
+    <!-- Hoved kontaineren / produkt listen -->
+    <main id="productContainer">
+        <!-- Skjult div'en som brukes for å generere en vare på hjemmeside -->
+        <div class="productTemplate" hidden>
+            <div class="productImageContainer"><img class="productImage" src=""></div>
+            <div class="productInfoContainer">
+                <p class="productName"></p>
+                <p class="productPriceText">kr <el class="productPrice"></el></p>
+                <button class="kjopKnapp">Legg i handlevogn</button>
+                <p class="productAdded" hidden>Lagt til handlekurven</p>
+            </div>
+        </div>
+        <!-- end Skjult div'en som brukes for å generere en vare på hjemmeside -->
+    </main>
+    <!-- end Hoved kontaineren / produkt listen -->
+        
+    <script type="application/javascript" src="main.js"></script>
+</body>
+</html>

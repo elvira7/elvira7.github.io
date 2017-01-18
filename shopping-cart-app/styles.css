@@ -1,0 +1,93 @@
+body {
+    width: 768px;
+}
+
+header {
+    position: relative;
+    height: 50px;
+    border: 1px solid darkgray;
+}
+
+#productContainer {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#productContainer .product {
+    width: 310px;
+    height: 325px;
+    border: 1px solid darkgray;
+    margin: 15px 35px;
+}
+
+#productContainer .productImageContainer {
+    text-align: center;
+    height: 200px;
+}
+
+#productContainer .productImage {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 20px 0;
+}
+.productName {
+    font-weight: bold;
+}
+.productPrice {
+    color: red;
+    font-weight: bold;
+}
+#productContainer .productInfoContainer {
+    padding: 0 20px;
+}
+
+.productAdded {
+    color: lightgray;
+}
+
+#handlekurvText, #tilbakeLenk {
+    position: absolute;
+}
+
+#tilbakeLenk {
+    top: 15px;
+    left: 15px;
+}
+
+#handlekurvText {
+    right: 15px;
+}
+
+#cartContainer .product {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+}
+
+#cartContainer .productImageContainer {
+    text-align: center;
+    width: 200px;
+}
+
+#cartContainer .productImage {
+    max-width: 180px;
+    max-height: 180px;
+    margin: 20px 0;
+}
+
+#cartContainer .productInfoContainer {
+    margin: 20px 0;
+}
+
+.kjopKnapp {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+    color: white;
+}
+
+.kjopKnapp:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

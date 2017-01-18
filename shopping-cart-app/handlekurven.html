@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handlekurven</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  
+</head>
+<body>
+
+    <!-- Header som viser hvor mange varer ligger i handlekurven og lenk for å gå til hjemmeside -->
+    <header>
+        <div id="tilbakeLenk"><a href="index.html">Tilbake til varelisten</a></div>
+        <div id="handlekurvText">
+            <p id="handlekurvLenk" hidden>Du har <el id="antallVare">0</el> varer i handlekurven</p>
+            <p id="ingenVarerText" hidden>Ingen varer i handlekurven</p>
+        </div>
+    </header>
+    <!-- end Header som viser hvor mange varer ligger i handlekurven og lenk for å gå til hjemmeside -->
+        
+    <!-- Hoved kontaineren som viser varene i handlekurven -->
+    <main id="cartContainer">
+        <!-- Skjult div'en som brukes for å generere en vare i handlekurven -->
+        <div class="productTemplate" hidden>
+            <div class="productImageContainer"><img class="productImage" src=""></div>
+            <div class="productInfoContainer">
+                <p class="productName"></p>
+                <p class="productPriceText">kr <el class="productPrice"></el></p>
+                <button class="removeProduct">Fjern</button>
+            </div>
+        </div>
+        <!-- end Skjult div'en som brukes for å generere en vare i handlekurven -->
+    </main>
+    <!-- end Hoved kontaineren som viser varene i handlekurven -->
+        
+    <script type="application/javascript" src="main.js"></script>
+</body>
+</html>
