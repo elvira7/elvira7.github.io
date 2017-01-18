@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+
+<title>Brainstorm App</title>
+
+</head>
+<body>
+
+    <div id="mainContainer">
+        <header>
+            <h1>Brainstorm App</h1>
+        </header>
+    <!-- start input section-->
+        <section class="inputSection" >
+            <label>Tittel</label><br>
+
+            <input class="input" id="tittel" type="text">
+            <input class="button" id="leggTilTittelBtn" type="button" value="Legg til tittel">
+        </section>
+        
+        <section class="inputSection" >
+            <label>Legg til ny ide</label><br>
+            <input class="input" id="ide" type="text">
+
+            <input class="button" id="leggTilIdeBtn" type="button" value="Legg til ide">
+        </section>
+        <!--end input section-->
+
+        <!-- main section-->
+        <main id="ideBank">
+
+                <h3 id="tittelTxt"></h3>
+            <div id="main">
+        <!-- list with ideas-->
+            <section class="list">
+                <h4>Ideer:</h4>
+                <p id="ideer"></p>
+            </section>
+         <!--end list of ideas-->
+
+         <!-- list of rejected ideas-->
+            <section class="list">
+                <h4>Forkastet:</h4>
+                <p id="forkastet"></p>
+            </section>
+         <!-- end list of rejected ideas-->
+            </div>
+        </main>
+        <!--end main section-->
+
+    </div>
+    <script src="main.js" type="application/javascript"></script>
+</body>
+</html>
