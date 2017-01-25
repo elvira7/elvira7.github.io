@@ -12,7 +12,7 @@
 
 <style>
 	#container{
-		width: 1008px;
+		max-width: 1024px;
     	margin: auto;
 		background-color: #e0e8f3;
 		font-family:  'Open Sans', sans-serif;
@@ -23,43 +23,39 @@
 		height: 150px;
 		display: flex;
 		justify-content: space-between;
-		
+
 	}
+    #intro{
+        width: 330px;
+
+    }
 	
 	#mainContainer{
 		display: flex;
+		flex-wrap: wrap;
+
+
 	}
 	
 	img{
 		width: 200px;
 		height: 170px;
-		margin: 15px 30px 0 55px;
-		
+		display: block;
+		margin: 0 auto;
+
 	}
 	
 	.projects{
-		width: 350px;
+		max-width: 300px;
 		height: 450px;
+		margin: 15px auto 15px;
 		background-color: #f8f8f9;
 		position: relative;
-		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.30)
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.30);
+		padding-top: 10px;
 	
-	}
-	
-	#project1{
-		
-		margin: 15px 10px 30px 20px;
-	}
-	#project2{
-		margin: 15px 10px 30px 10px;
-	}
-	
-	#project3{
-		margin: 15px 20px 30px 10px;
-		
 	}
 
-	
 	.btn{
 	float: right;
 	background-color: #f8115e;
@@ -87,7 +83,7 @@
 	h1, h4{
 		margin: 50px;
 	}
-	
+
 	
 	h3{
 		text-align: center;
@@ -102,6 +98,17 @@
 		text-align: center;
 		padding-top: 20px;	
 	}
+
+    /*--- Smartphone resolution ---*/
+
+    @media screen and (max-width: 520px){
+        #intro{
+            display: none;
+        }
+    }
+
+    /*--- end of smartphone resolution ---*/
+
 	
 </style>
 
@@ -110,41 +117,54 @@
 <body>
 <div id="container">
 	<header id="mainPageHeader">
-		<h1>Elvira Semenova <span style="color: #f8115e;">< /webdesigner></UX designer></span></h1>
-		<h4>Here are some of my study projects.<br> I use <span style="color: #f8115e;">HTML5</span>, <span style="color: #f8115e;">CSS3</span> and <span style="color: #f8115e;">JavaScript</span>.<br> Click on each work to find out more.</h4>
+		<h1>Elvira Semenova<span style="color: #f8115e;">  /webdesigner </span></h1>
+        <div id="intro">
+		<h4>Here are some of my study projects. I use <span style="color: #f8115e;">HTML5</span>, <span style="color: #f8115e;">CSS3</span> and <span style="color: #f8115e;">JavaScript</span>. Click on each work to find out more.</h4></div>
 	</header>
 	
 	
 	<main id="mainContainer">
+
 	<article class="projects" id="project1">
 		<div  alt="brainstorm_app">
-		<img alt="brainstorm_app" src="pictures/brainstorm.png">
+		<img alt="brainstorm_app" src="pictures/brainstorm.png" >
+		<div class="prjDiscription">
 		<h3>Brainstorm application</h3>
-			<p class="prjDiscription">This is a simple solution that allows to post ideas and discard them. When user clicks on an idea it should move to rejected, possibly. If using undo and click on a discarded idea should the move back to ideas section.</p></div>
+			<p>This is a simple solution that allows to post ideas and discard them. When user clicks on an
+				idea it should move to rejected, possibly. If using undo and click on a discarded idea should
+				the move back to ideas section.</p></div>
 		<div class="button">
 		<a target="_blank" href="/brainstorm-app/index.html"><input class="btn" type="button" value="Show project"></a></div>
+		</div>
 	</article>
+
 	<article class="projects" id="project2">
 		<div alt="shopping_cart">
-		<img alt="shopping-cart" src="pictures/shopping_cart.png">
+		<img alt="shopping-cart" src="pictures/shopping_cart.png" >
+		<div class="prjDiscription">
 		<h3>Shopping cart</h3>
-		<p class="prjDiscription">In this task I use cookies to store information about a purchase. On the product page products shown with picture, name, price and add-button. On the cart page shown the products added by user.  The products on the website are generated with JavaScript.</p></div>
+		<p class="prjDiscription">In this task I use cookies to store information about a purchase.
+			On the product page products shown with picture, name, price and add-button. On the cart page shown
+			the products added by user.  The products on the website are generated with JavaScript.</p></div>
 		<div class="button"><a target="_blank" href="/shopping-cart-app/index.html"><input class="btn" type="button" value="Show project"></a></div>
+			</div>
 	</article>
+
 	<article class="projects" id="project3">
 		<div alt="image_gallery">
 		<img alt="image-gallery" src="pictures/image_gallery.png">
+		<div class="prjDiscription">
 		<h3>Image gallery</h3>
 		<p class="prjDiscription">This is an image gallery of my hometown. First shows the preview of all images. When you click on one of the pictures, it increases and background fades out. It possible to flip through the pictures back and forth. Created  with HTML and JavaScript.</p></div>
 		<div class="button"><a target="_blank" href="/image-gallery-project/index.html"><input class="btn" type="button" value="Show project"></a></div>
+		</div>
 	</article>
 
 	</main>
 	<footer id="footer">
 	
 	<p>©2017 <a href="mailto:elvira.semyonova@gmail.com">Elvira Semenova</a></p>
-	
-		
+
 	</footer>
 
 
