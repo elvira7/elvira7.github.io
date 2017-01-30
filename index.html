@@ -29,30 +29,24 @@
         width: 330px;
 
     }
-	
-	#mainContainer{
-		display: flex;
-		flex-wrap: wrap;
 
-
-	}
 	
 	img{
-		width: 200px;
-		height: 170px;
-		display: block;
-		margin: 0 auto;
+		width: 230px;
+		height: 200px;
+		margin: auto 0 auto 10px;
 
 	}
 	
 	.projects{
-		max-width: 300px;
-		height: 450px;
-		margin: 15px auto 15px;
+        display: flex;
+		max-width: 100%;
+		height: 230px;
+		margin: 15px;
 		background-color: #f8f8f9;
 		position: relative;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.30);
-		padding-top: 10px;
+
 	
 	}
 
@@ -89,7 +83,8 @@
 		text-align: center;
 	}
 	.prjDiscription{
-		margin: 15px;
+		margin: 20px;
+
 	}
 	
 	#footer{
@@ -101,7 +96,7 @@
 
     /*--- Smartphone resolution ---*/
 
-    @media screen and (max-width: 520px){
+    @media screen and (max-width: 685px){
         #intro{
             display: none;
         }
@@ -125,40 +120,43 @@
 	
 	<main id="mainContainer">
 
-	<article class="projects" id="project1">
-		<div  alt="brainstorm_app">
-		<img alt="brainstorm_app" src="pictures/brainstorm.png" >
-		<div class="prjDiscription">
-		<h3>Brainstorm application</h3>
-			<p>This is a simple solution that allows to post ideas and discard them. When user clicks on an
-				idea it should move to rejected, possibly. If using undo and click on a discarded idea should
-				the move back to ideas section.</p></div>
-		<div class="button">
-		<a target="_blank" href="/brainstorm-app/index.html"><input class="btn" type="button" value="Show project"></a></div>
-		</div>
-	</article>
 
 	<article class="projects" id="project2">
-		<div alt="shopping_cart">
+
 		<img alt="shopping-cart" src="pictures/shopping_cart.png" >
 		<div class="prjDiscription">
 		<h3>Shopping cart</h3>
-		<p class="prjDiscription">In this task I use cookies to store information about a purchase.
-			On the product page products shown with picture, name, price and add-button. On the cart page shown
-			the products added by user.  The products on the website are generated with JavaScript.</p></div>
+		<p class="prjDiscription">A simple Christmas e-shop that uses cookies to store products in the shopping cart.
+			The product page lists products with picture, name, price and the Add button. The cart page shows
+            products added by the user. The product list is generated with Javascript from a product template via direct DOM manipulation.
 		<div class="button"><a target="_blank" href="/shopping-cart-app/index.html"><input class="btn" type="button" value="Show project"></a></div>
-			</div>
+        </div>
+
 	</article>
 
 	<article class="projects" id="project3">
-		<div alt="image_gallery">
+
 		<img alt="image-gallery" src="pictures/image_gallery.png">
 		<div class="prjDiscription">
 		<h3>Image gallery</h3>
-		<p class="prjDiscription">This is an image gallery of my hometown. First shows the preview of all images. When you click on one of the pictures, it increases and background fades out. It possible to flip through the pictures back and forth. Created  with HTML and JavaScript.</p></div>
+		<p class="prjDiscription">This is a gallery of images of my home town. The default view shows a gallery of image thumbnails and titles.
+            Clicking on a thumbnail opens the overlay that shows the image in full size. User can navigate back and forth through the gallery directly
+            from the overlay without having to go back to the thumbnail gallery. Created with HTML5 (<pre>figure</pre> element), CSS and JavaScript.</p></div>
 		<div class="button"><a target="_blank" href="/image-gallery-project/index.html"><input class="btn" type="button" value="Show project"></a></div>
-		</div>
+
 	</article>
+
+    <article class="projects" id="project1">
+
+         <img alt="brainstorm_app" src="pictures/brainstorm.png" >
+            <div class="prjDiscription">
+                <h3>Brainstorm application</h3>
+                <p>This is a simple solution that allows user to post ideas and discard them. A click on a suggested
+                    idea moves it to rejected and the other way around.</p></div>
+            <div class="button">
+                <a target="_blank" href="/brainstorm-app/index.html"><input class="btn" type="button" value="Show project"></a></div>
+
+     </article>
 
 	</main>
 	<footer id="footer">
