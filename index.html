@@ -11,6 +11,20 @@
 <title>My projects</title>
 
 <style>
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
 	#container{
 		max-width: 1024px;
     	margin: auto;
@@ -34,14 +48,14 @@
 	img{
 		width: 230px;
 		height: 200px;
-		margin: auto 0 auto 10px;
+		margin: 20px;
 
 	}
 	
 	.projects{
         display: flex;
 		max-width: 100%;
-		height: 230px;
+        max-height: 500px;
 		margin: 15px;
 		background-color: #f8f8f9;
 		position: relative;
@@ -77,13 +91,17 @@
 	h1, h4{
 		margin: 50px;
 	}
+    .mobile{
 
+        display: none;
+
+    }
 	
 	h3{
 		text-align: center;
 	}
 	.prjDiscription{
-		margin: 20px;
+		margin: 10px;
 
 	}
 	
@@ -96,11 +114,58 @@
 
     /*--- Smartphone resolution ---*/
 
-    @media screen and (max-width: 685px){
-        #intro{
+    @media screen and (max-width: 685px) {
+        #intro {
             display: none;
         }
+
+        @media screen and (min-width: 521px) and (max-width: 685px) {
+            .prjDiscription {
+                overflow: hidden;
+                max-height: 167px;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+               /* -webkit-line-clamp: 3; /* number of lines to show */
+            }
+
+        }
+
+
+
+    @media screen and (max-width: 520px){
+        .projects{
+            display: flex;
+            flex-direction: column;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+        .prjDiscription{
+            display: none;
+        }
+        .mobile{
+            display: block;
+            margin: 10px auto;
+
+        }
+
+        .btn{
+            display: block;
+            margin: 10px auto;
+            float: none;
+
+
+        }
+        .button{
+            position: relative;
+        }
+
+
     }
+
+
 
     /*--- end of smartphone resolution ---*/
 
@@ -122,32 +187,32 @@
 
 
 	<article class="projects" id="project2">
-
+        <h3 class="mobile">Shopping cart</h3>
 		<img alt="shopping-cart" src="pictures/shopping_cart.png" >
 		<div class="prjDiscription">
 		<h3>Shopping cart</h3>
-		<p class="prjDiscription">A simple Christmas e-shop that uses cookies to store products in the shopping cart.
+		<p>A simple Christmas e-shop that uses cookies to store products in the shopping cart.
 			The product page lists products with picture, name, price and the Add button. The cart page shows
-            products added by the user. The product list is generated with Javascript from a product template via direct DOM manipulation.
+            products added by the user. The product list is generated with Javascript from a product template via direct DOM manipulation.</p></div>
 		<div class="button"><a target="_blank" href="/shopping-cart-app/index.html"><input class="btn" type="button" value="Show project"></a></div>
-        </div>
+
 
 	</article>
 
 	<article class="projects" id="project3">
-
+        <h3 class="mobile">Image gallery</h3>
 		<img alt="image-gallery" src="pictures/image_gallery.png">
 		<div class="prjDiscription">
 		<h3>Image gallery</h3>
-		<p class="prjDiscription">This is a gallery of images of my home town. The default view shows a gallery of image thumbnails and titles.
+		<p>This is a gallery of images of my home town. The default view shows a gallery of image thumbnails and titles.
             Clicking on a thumbnail opens the overlay that shows the image in full size. User can navigate back and forth through the gallery directly
-            from the overlay without having to go back to the thumbnail gallery. Created with HTML5 (<pre>figure</pre> element), CSS and JavaScript.</p></div>
+            from the overlay without having to go back to the thumbnail gallery. Created with HTML5 (figure element), CSS and JavaScript.</p></div>
 		<div class="button"><a target="_blank" href="/image-gallery-project/index.html"><input class="btn" type="button" value="Show project"></a></div>
 
 	</article>
 
     <article class="projects" id="project1">
-
+        <h3 class="mobile">Brainstorm app</h3>
          <img alt="brainstorm_app" src="pictures/brainstorm.png" >
             <div class="prjDiscription">
                 <h3>Brainstorm application</h3>
@@ -155,7 +220,6 @@
                     idea moves it to rejected and the other way around.</p></div>
             <div class="button">
                 <a target="_blank" href="/brainstorm-app/index.html"><input class="btn" type="button" value="Show project"></a></div>
-
      </article>
 
 	</main>
