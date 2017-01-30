@@ -65,15 +65,15 @@
 	}
 
 	.btn{
-	float: right;
-	background-color: #f8115e;
-	color: aliceblue;
-	width: 110px;
-	height: 30px;
-	margin-right: 15px;
-	cursor: pointer;
-	border-radius: 4px;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        float: right;
+        background-color: #f8115e;
+        color: aliceblue;
+        width: 110px;
+        height: 30px;
+        margin-right: 15px;
+        cursor: pointer;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 	}
 	.btn:hover{
@@ -100,7 +100,7 @@
 	h3{
 		text-align: center;
 	}
-	.prjDiscription{
+	.prjDescription{
 		margin: 10px;
 
 	}
@@ -111,61 +111,67 @@
 		text-align: center;
 		padding-top: 20px;	
 	}
-
+    a{
+        text-decoration: none;
+    }
     /*--- Smartphone resolution ---*/
 
     @media screen and (max-width: 685px) {
         #intro {
             display: none;
         }
+    }
 
-        @media screen and (min-width: 521px) and (max-width: 685px) {
-            .prjDiscription {
-                overflow: hidden;
-                max-height: 167px;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-               /* -webkit-line-clamp: 3; /* number of lines to show */
-            }
+    @media screen and (min-width: 521px) and (max-width: 685px) {
 
+        .prjDescription {
+            overflow: hidden;
+            max-height: 167px;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            /* -webkit-line-clamp: 3; /* number of lines to show */
         }
-
-
-
-    @media screen and (max-width: 520px){
-        .projects{
-            display: flex;
-            flex-direction: column;
-        }
-        img{
-            display: block;
-            margin: 0 auto;
-        }
-        .prjDiscription{
-            display: none;
-        }
-        .mobile{
-            display: block;
-            margin: 10px auto;
-
-        }
-
-        .btn{
-            display: block;
-            margin: 10px auto;
-            float: none;
-
-
-        }
-        .button{
-            position: relative;
-        }
-
 
     }
 
 
+
+    @media screen and (max-width: 520px) {
+        .projects {
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .prjDescription {
+            display: none;
+        }
+
+        .mobile {
+            display: block;
+            margin: 10px auto;
+
+        }
+
+        .btn {
+            display: block;
+            margin: 10px auto;
+            float: none;
+
+        }
+
+        .button {
+            position: relative;
+
+        }
+
+
+    }
 
     /*--- end of smartphone resolution ---*/
 
@@ -177,7 +183,7 @@
 <body>
 <div id="container">
 	<header id="mainPageHeader">
-		<h1>Elvira Semenova<span style="color: #f8115e;">  /webdesigner </span></h1>
+		<h1>Elvira Semenova<span style="color: #f8115e; white-space: nowrap;">  /UX designer </span></h1>
         <div id="intro">
 		<h4>Here are some of my study projects. I use <span style="color: #f8115e;">HTML5</span>, <span style="color: #f8115e;">CSS3</span> and <span style="color: #f8115e;">JavaScript</span>. Click on each work to find out more.</h4></div>
 	</header>
@@ -189,7 +195,7 @@
 	<article class="projects" id="project2">
         <h3 class="mobile">Shopping cart</h3>
 		<img alt="shopping-cart" src="pictures/shopping_cart.png" >
-		<div class="prjDiscription">
+		<div class="prjDescription">
 		<h3>Shopping cart</h3>
 		<p>A simple Christmas e-shop that uses cookies to store products in the shopping cart.
 			The product page lists products with picture, name, price and the Add button. The cart page shows
@@ -202,7 +208,7 @@
 	<article class="projects" id="project3">
         <h3 class="mobile">Image gallery</h3>
 		<img alt="image-gallery" src="pictures/image_gallery.png">
-		<div class="prjDiscription">
+		<div class="prjDescription">
 		<h3>Image gallery</h3>
 		<p>This is a gallery of images of my home town. The default view shows a gallery of image thumbnails and titles.
             Clicking on a thumbnail opens the overlay that shows the image in full size. User can navigate back and forth through the gallery directly
@@ -214,7 +220,7 @@
     <article class="projects" id="project1">
         <h3 class="mobile">Brainstorm app</h3>
          <img alt="brainstorm_app" src="pictures/brainstorm.png" >
-            <div class="prjDiscription">
+            <div class="prjDescription">
                 <h3>Brainstorm application</h3>
                 <p>This is a simple solution that allows user to post ideas and discard them. A click on a suggested
                     idea moves it to rejected and the other way around.</p></div>
