@@ -1,0 +1,326 @@
+@charset "utf-8";
+body{
+    margin: 0;
+}
+
+
+/*-- 978gs--*/
+
+.col{
+    
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+} 
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: calc(50% - 10px);}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/*-- end 978gs --*/
+
+#menuIcon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.product-content-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+#bannerImg {
+    max-width: 100%;
+}
+
+.product-box{
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    
+}
+
+.product-content-box{
+	position: relative;
+    background-color: #EBDBC0;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 15px;
+    border: 1px solid rgb(235, 235, 235);
+    padding-bottom: 55px;
+}
+.product-content-box img:hover {
+    opacity: 0.6;
+	cursor: pointer;
+}
+.product-info {
+	position: relative;
+}
+
+.merInfoBtn {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	background-color: #4D8FAB;
+	color: white;
+	font-family: 'Handlee', cursive;
+	border: none;
+    font-size: 16px;
+    width: 100px;
+    height: 30px;
+}
+
+.merInfoBtn:hover {
+	background-color: #396b80;
+	cursor: pointer;
+}
+
+#mainPageHeader {
+    position: fixed;
+    height: 4em;
+    background-color: #C4B197;
+    z-index: 1;
+    
+}
+#mainPageHeader a {
+    text-decoration: none;
+}
+
+#logo {
+    
+   position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Handlee', cursive;
+    font-size: 30px;
+    color: #352e2e;
+    font-weight: bold;    
+}
+
+#mainPageNav {
+    position: absolute;
+    top: 10px;
+}
+#bannerContainer{
+    padding-top: 4em;
+    position: relative;
+    z-index: 0;
+}
+
+#bannerContainer p{
+    position: absolute;
+    bottom: 7px;
+    left: 15px;
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+    color: #352e2e;
+    font-weight: bold;     
+}
+
+@media screen and (min-width: 520px){
+    #mainPageNav {
+        right: 65px;
+    }
+}
+
+#mainContent {
+	padding: 15px;
+}
+
+#mainPageNav li {
+    float: left;
+    margin-right: 30px;
+  
+}
+#mainPageNav a {
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    color: #352e2e; 
+}
+
+h4 {
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    font-size: 18px;
+    color: #352e2e;
+}
+p{
+    font-family: 'Handlee', cursive;
+    font-size: 16px;
+    color: #352e2e;
+}
+
+/* -- Smartphone resolution -- */
+
+@media screen and (max-width: 520px){
+    #mainContent {
+		padding: 5px;
+	}
+	.product-box {
+		margin-bottom: 5px;
+    	margin-top: 5px;
+	}
+    .product-content-box {
+		margin-left: 5px;
+    	margin-right: 5px;
+    }
+    .col-8, .col-4{
+        width: 100%;
+    }
+    #bannerContainer {
+        display: none;
+    }
+    #mainPageNav {
+        right: 60px;
+    }
+	
+	#mainContent {
+		padding-top: 79px;
+	}
+	
+	.merInfoBtn {
+		height: 35px;
+    	width: 75%;
+    	left: 13%;
+	}
+	
+}
+
+/* -- End of smartphone resolution -- */
+
+/* -- Tablet resolution -- */
+@media screen and (min-width: 521px) and (max-width: 1023px){
+	#mainContent {
+		padding: 10px;
+	}
+	.product-box {
+		margin-bottom: 10px;
+    	margin-top: 10px;
+	}
+    .product-content-box {
+        max-height: 145px;
+        height: 145px;
+		margin-left: 10px;
+    	margin-right: 10px;
+    }
+    .col-8 .product-content-box {
+        display: flex;
+    }
+    
+    .col-8 .product-content-box > * {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .col-8 .product-info {
+        padding-left: 20px;
+    }
+    
+    .col-4 .product-content-box img {
+        display: block;
+        margin: 0 auto 10px auto;
+        height: 50%;
+    }
+    
+    .col-4 .product-info {
+        height: 45%;
+    }
+    
+    .product-info {
+        overflow: hidden;
+    }
+	
+	.merInfoBtn {
+		font-size: 12px;
+    	width: 80px;
+    	height: 25px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+    #menuLayer{
+        display: none;
+        background-color: #C4B197;
+        position: absolute;
+        top: 45px;
+        right: -40px;
+        padding: 10px 20px;
+    }
+    #menuLayer.expanded {
+        display: block;
+    }
+    #menuLayer li {
+        float: none;
+        margin: 10px;
+    }
+    #menuLayer li a {
+        color: #352e2e;
+    }
+    #menuIcon{
+        display: block;
+        cursor: pointer;
+    }
+	
+	#mainPageNav:hover {
+		zoom: 1.1;
+		top: 7px;
+		right: 63px;
+		cursor: pointer;
+	}
+}
+
+/* -- End of tablet resolution -- */
+
+/* -- Laptop resolution -- */
+@media screen and (min-width: 1024px){
+    .col-8, .col-4{
+        width: 33%;
+    }
+    #menuIcon{
+        display: none;
+    }
+    #menuLayer{
+        display: block;
+        margin-top: 12px;
+    }
+}
+
+/* -- End of laptop resolution -- */
+
+/*--  Desktop resolution -- */
+@media screen and (min-width: 1240px){
+    #bannerImg {
+        min-width: 100%;
+    }
+    .col-8, .col-4{
+        width: 24.7%;
+    }
+}
+
+/* --  End of desktop resolution -- */
+
+
+
+#mainPageFooter {
+	position: static;
+	bottom: 0px;
+	background-color: #C4B197;
+	color: #352e2e;
+	width: 100%;
+	padding: 15px;
+	display: flex;
+}
+
+#mainPageFooter span {
+    margin: 0 auto;
+}
